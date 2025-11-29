@@ -60,6 +60,6 @@ Consistently predicts unseen handwritten digit images
 
 Challenges
 
-Difficult to improve beyond ~97% using basic ANN
+Difficult to improve beyond ~97% using basic CNN
 
 More computing power needed for more complex architectures
