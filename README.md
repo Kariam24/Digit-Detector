@@ -3,58 +3,63 @@
 By: Kariam Rodriguez, Yanni Pierre, Izze Lino, Sebastian Barrera
 Course: CAP 4630
 
-Overview
+📌 Overview
 
-This project builds and trains a machine learning model that recognizes handwritten digits (0–9) using the MNIST dataset. The model uses deep learning to analyze grayscale images and predict which digit was written. This type of technology powers systems like check readers, postal sorting machines, and digitized forms.
+This project uses a neural network to recognize handwritten digits (0–9) from the MNIST dataset. The model learns patterns from thousands of labeled digit images and predicts the correct number when given a new handwritten input. Applications include digital form processing, bank check readers, and postal mail sorting.
 
-Objectives
+🎯 Objectives
 
-Train an AI model to classify handwritten digits accurately
+Train a model capable of classifying handwritten digits with high accuracy
 
-Understand how neural networks process image data
+Understand neural network training and evaluation
 
-Develop a simple interface where users can draw a digit and receive a prediction
+Build a simple interactive interface where users can draw and test digits
 
-Model & Tools
+🧠 Model Details
 
-Dataset: MNIST (70,000 samples, 28×28 grayscale images)
+Dataset: MNIST (70,000 grayscale digit images, 28×28 px)
 
 Framework: TensorFlow / Keras
 
-Architecture: Dense layers with Batch Normalization & Dropout
-Dense(30, ReLU), Dense(10, Softmax)
+Architecture: Dense layers + Batch Normalization + Dropout
+
+Dense(30, ReLU)
+
+Dense(10, Softmax)
+
+Loss Function: Sparse Categorical Crossentropy
 
 Optimizer: Adam
 
-Loss: Sparse Categorical Crossentropy
-
 Training Results
 
-Accuracy: 99.39% training, 99.51% validation
+Training Accuracy: 99.39%
+
+Validation Accuracy: 99.51%
 (Shown in slides) 
 
 AI Digit Detector Project
 
-Method
-Data Input → Preprocessing → Model Training → Evaluation → Prediction Output
+⚙️ Methodology
+Data Input → Preprocessing → Model Training → Evaluation → Prediction
 
 
-Normalized data (0–1)
+Normalized pixel values (0–1)
 
 Trained for 10 epochs
 
-Evaluated accuracy and validation loss
+Evaluated performance with accuracy metrics
 
-Results
+📈 Results & Insights
 
-High accuracy on unseen handwritten digits
+Strong performance and generalization
 
-Minimal overfitting
+Small gap between training and validation → minimal overfitting
 
-Model performs strong with a basic structure
+Consistently predicts unseen handwritten digit images
 
 Challenges
 
-Hard to improve beyond 97% using simple CNN
+Difficult to improve beyond ~97% using basic ANN
 
-More computation needed for advanced accuracy
+More computing power needed for more complex architectures
