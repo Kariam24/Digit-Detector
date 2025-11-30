@@ -1,65 +1,126 @@
 # Digit-Detector
 
 By: Kariam Rodriguez, Yanni Pierre, Izze Lino, Sebastian Barrera
+
 Course: CAP 4630
 
-📌 Overview
+📌 Project Overview
 
-This project uses a neural network to recognize handwritten digits (0–9) from the MNIST dataset. The model learns patterns from thousands of labeled digit images and predicts the correct number when given a new handwritten input. Applications include digital form processing, bank check readers, and postal mail sorting.
+This project focuses on building a neural network model that can accurately recognize handwritten digits (0–9). The goal is to demonstrate how deep learning can be applied to real-world image recognition tasks and to create an interactive way for users to draw digits and receive predictions.
 
 🎯 Objectives
+Problem
 
-Train a model capable of classifying handwritten digits with high accuracy
+Computers struggle to interpret human handwriting accurately.
 
-Understand neural network training and evaluation
+We aimed to create an AI model capable of reading handwritten digits (0–9).
 
-Build a simple interactive interface where users can draw and test digits
+Why It Matters
 
-🧠 Model Details
+Powers technologies such as check readers, postal address scanners, and digitized forms.
 
-Dataset: MNIST (70,000 grayscale digit images, 28×28 px)
+Demonstrates how AI can learn and recognize human writing styles.
 
-Framework: TensorFlow / Keras
+Goal
 
-Architecture: Dense layers + Batch Normalization + Dropout
+Train a highly accurate model that can classify handwritten digits.
 
-Dense(30, ReLU)
+Show how Artificial Neural Networks can be applied to image recognition.
 
-Dense(10, Softmax)
+Build an interface where users can draw digits and view predictions.
 
-Loss Function: Sparse Categorical Crossentropy
+🧠 System Description
+
+Dataset
+
+MNIST dataset: 70,000 grayscale digit images (28×28 pixels)
+
+60,000 training samples and 10,000 test samples
+
+Model Type
+
+Convolutional Neural Network (CNN) using TensorFlow/Keras
+
+Why CNN
+
+Designed specifically for image recognition
+
+Consistently high accuracy on handwritten digit classification
+
+Automatically detects and learns key visual patterns
+
+Preprocessing
+
+Normalized pixel values to range (0–1)
+
+Flattened images into 1D arrays
+
+⚙️ Methodology / Pipeline
+Data Input → Preprocessing → Model Training → Evaluation → Prediction Output
+
+Steps
+
+Split MNIST data into training and testing
+
+Trained model using Adam optimizer
+
+Evaluated accuracy and loss performance
+
+Evaluation Metric
+
+Accuracy (balanced class dataset)
+
+🧩 Model Architecture
+Layers Used
+
+3 Convolutional layers: 32, 64, 128 filters
+
+ReLU activation
+
+Batch Normalization
+
+Max Pooling (2×2)
+
+Dropout layers: 0.25, 0.35, 0.45
+
+Output: Dense(10, Softmax) for digit classification
+
+Training Setup
 
 Optimizer: Adam
 
+Loss Function: Sparse Categorical Crossentropy
+
 Training Results
 
-Training Accuracy: 99.39%
+Final Training Accuracy: 99.39%
 
 Validation Accuracy: 99.51%
-(Shown in slides) 
 
-AI Digit Detector Project
+📈 Implementation Results
+Observations
 
-⚙️ Methodology
-Data Input → Preprocessing → Model Training → Evaluation → Prediction
+Model generalized well
 
+Small gap between training and validation loss → minimal overfitting
 
-Normalized pixel values (0–1)
+High performance on unseen handwritten digit samples
 
-Trained for 10 epochs
+Challenges & Solutions
+Challenge	Solution
+Early training instability	Adjusted learning rate and used Adam optimizer
+Similar digit confusion (e.g., 8 recognized as 3)	Added more convolutional layers to improve feature extraction
+🏁 Conclusion
+Key Takeaways
 
-Evaluated performance with accuracy metrics
+Learned preprocessing and normalization of image data
 
-📈 Results & Insights
+Gained experience training and evaluating CNN models
 
-Strong performance and generalization
+Achieved >99% classification accuracy
 
-Small gap between training and validation → minimal overfitting
+Future Work
 
-Consistently predicts unseen handwritten digit images
+Implement deeper CNN architecture for even stronger performance
 
-Challenges
-
-Difficult to improve beyond ~97% using basic CNN
-
-More computing power needed for more complex architectures
+Build a GUI / web app so users can draw digits live and test predictions
